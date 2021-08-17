@@ -1,0 +1,15 @@
+#gameboard {
+    width: 340px;
+    height: 340px;
+    table-layout: fixed;
+}
+
+#cell {
+    text-align: center;
+    border: 1px solid black;
+    height: 33%;
+}
+
+#cell:hover {
+    background: gainsboro;
+}
