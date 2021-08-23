@@ -117,20 +117,20 @@ const Controller = (function () {
         ];
         // Check for both player 3 in a row condition
         function checkForX(cell) {
-            return cell === "X";
+            return cell === player1.mark;
         }
         function checkForO(cell) {
-            return cell === "O";
+            return cell === player2.mark;
         }
         // Returns winning player if 3 in a row is found
         function winner(player) {
             pieces.forEach(piece => {
 
                 if (piece.every(checkForX)) {
-                    player = "Player X wins!";
+                    player = "Marker X wins!";
 
                 } else if (piece.every(checkForO)) {
-                    player = "Player 0 wins!"
+                    player = "Marker O wins!"
                 }
             });
             return player;
