@@ -66,13 +66,13 @@ const Controller = (function () {
 
             if (Gameboard.counter() === 9) alert("Board full, tie game!");
         }
-    };
 
-    const clearListeners = () => {
-        Gameboard.cells.forEach(cell => {
-            cell.removeEventListener('click', markCell)
-        });
-    }
+        function clearListeners () {
+            Gameboard.cells.forEach(cell => {
+                cell.removeEventListener('click', markCell)
+            });
+        }
+    };
 
     const checkForWinner = () => {
         // Possible winning conditions
@@ -117,10 +117,10 @@ const Controller = (function () {
         ];
         // Check for both player 3 in a row condition
         function checkForX(cell) {
-            return cell === player1.marker;
+            return cell === "X";
         }
         function checkForO(cell) {
-            return cell === player2.marker;
+            return cell === "O";
         }
         // Returns winning player if 3 in a row is found
         function winner(player) {
